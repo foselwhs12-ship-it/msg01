@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>주소천사 | 실시간업데이트 주소모음 </title>
+  <meta name="description" content="실시간업데이트 트렌디한 주소천사 + 커뮤니티. 성인, 웹툰, 스포츠중계, TV다시보기, 유흥, 카지노, 먹튀검증 등 카테고리별 추천 사이트를 제공합니다.">
+  <meta name="keywords" content="주소천사, 링크모음, 웹사이트 모음, 주소모음, 성인, 웹툰, 스포츠중계, TV다시보기, 카지노, 먹튀검증">
+  <link href="https://fonts.googleapis.com/css2?family=Partial+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f9f9fb; --card:#ffffff; --muted:#555;
+      --accent1: #FF0050; --accent2: #7C4DFF; --accent3: #00C4B4;
+      font-family: 'Partial Sans', sans-serif;
+      font-weight: 700;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#222;font-weight:700}
+    a{color:inherit;text-decoration:none;font-weight:700}
+    header{position:sticky;top:0;backdrop-filter: blur(6px);background:#fff;border-bottom:1px solid #eee;padding:12px 16px;display:flex;align-items:center;gap:12px;z-index:20}
+    .logo{font-weight:800;font-size:18px;display:flex;align-items:center;gap:8px;color:var(--accent1);cursor:pointer}
+    .logo svg{width:28px;height:28px;fill:var(--accent1)}
+    .search{flex:1;display:flex}
+    .search input{width:100%;padding:10px 14px;border-radius:999px;border:1px solid #ddd;background:#fff;color:#222;font-weight:700}
+    .btn{background:linear-gradient(90deg,var(--accent2),var(--accent3));padding:8px 12px;border-radius:12px;font-weight:800;color:#fff;border:none;cursor:pointer}
+    main{padding:16px;max-width:1200px;margin:16px auto}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+    .tab{padding:8px 12px;border-radius:999px;background:#eee;cursor:pointer;color:#333;user-select:none;transition:all 0.2s ease;font-weight:700}
+    .tab:hover{background:linear-gradient(90deg,var(--accent3),var(--accent2));color:#fff}
+    .tab.active{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;font-weight:800}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .card{background:var(--card);padding:12px;border-radius:12px;border:1px solid #ddd;display:flex;gap:12px;align-items:center;box-shadow:0 2px 4px rgba(0,0,0,0.05);font-weight:700}
+    .thumb{width:72px;height:72px;border-radius:10px;flex-shrink:0;background:linear-gradient(135deg,var(--accent2),var(--accent3));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+    .meta h3{margin:0;font-size:16px;color:#111;font-weight:800}
+    .meta p{margin:6px 0 0 0;color:var(--muted);font-size:13px;font-weight:700}
+    .link-btn{padding:8px 10px;border-radius:8px;background:var(--accent3);color:#fff;font-weight:800;border:none;cursor:pointer}
+    footer{padding:28px 16px;text-align:center;color:var(--muted);font-size:13px;background:#fff;border-top:1px solid #eee;font-weight:700}
+    @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}}
+
+    .banner-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 270px);
+      grid-template-rows: repeat(4, 75px);
+      gap: 0;
+      padding: 0;
+      background: #fff;
+      justify-content: center;
+    }
+    .banner-btn {
+      width: 270px;
+      height: 75px;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      border: none;
+      color: #fff;
+      font-weight: 800;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .banner-btn:hover {
+      background: linear-gradient(90deg, var(--accent3), var(--accent2));
+    }
+
+    .banner-btn.image-banner {
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
+
+    .banner-btn.image-banner:hover {
+      background: transparent;
+    }
+
+    .banner-btn.image-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    
+    /* 모바일 반응형 스타일 */
+    @media (max-width: 1200px) {
+      .banner-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 60px);
+        gap: 2px;
+        padding: 8px;
+      }
+      .banner-btn {
+        width: 100%;
+        height: 60px;
+        font-size: 14px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .banner-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 50px);
+        gap: 2px;
+        padding: 8px;
+      }
+      .banner-btn {
+        width: 100%;
+        height: 50px;
+        font-size: 12px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .banner-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(16, 45px);
+        gap: 2px;
+        padding: 8px;
+      }
+      .banner-btn {
+        width: 100%;
+        height: 45px;
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="location.reload()">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 32c4-8 12-14 20-14s16 6 20 14" fill="none" stroke="currentColor" stroke-width="3"/>
+        <path d="M44 32c-4 8-12 14-20 14s-16-6-20-14" fill="none" stroke="currentColor" stroke-width="3"/>
+      </svg>
+      주소천사
+    </div>
+    <div class="search">
+      <input type="search" placeholder="검색...">
+    </div>
+    <button class="btn" onclick="window.open('https://t.me/jusoangel', '_blank')">관리자</button>
+  </header>
+
+  <div class="banner-grid">
+    <a class="banner-btn image-banner" href="https://bk-9999.com/" target="_blank" rel="noopener noreferrer">
+      <img src="블랙-300-10.gif" alt="배너 제휴문의">
+    </a>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+    <button class="banner-btn" onclick="window.open('https://t.me/jusoangel', '_blank')">제휴문의</button>
+  </div>
+
+  <main>
+    <nav class="tabs">
+      <div class="tab active" data-category="성인">성인</div>
+      <div class="tab" data-category="웹툰">웹툰</div>
+      <div class="tab" data-category="성인웹툰">성인웹툰</div>
+      <div class="tab" data-category="스포츠중계">스포츠중계</div>
+      <div class="tab" data-category="TV다시보기">TV다시보기</div>
+      <div class="tab" data-category="유흥">유흥</div>
+      <div class="tab" data-category="카지노">카지노</div>
+      <div class="tab" data-category="먹튀검증">먹튀검증</div>
+    </nav>
+    <div class="grid" id="cardGrid"></div>
+  </main>
+  <footer>
+    © 2025 주소천사
+  </footer>
+  <script>
+    const categories = {
+      '성인': [
+        { title: '섹플릭스', url: 'https://www.xn--py2b11lf5aq86b.com/' },
+        { title: '야동코리아', url: 'https://www.xn--2q1b6s99e82b970asja510d.com/' },
+        { title: '19양', url: 'https://www.xn--19-jt7j.com/' },
+        { title: '밤포탈', url: 'https://bampt1.com/' },
+        { title: 'av프루나', url: 'https://kr12.pruna.sbs/' },
+        { title: 'av코걸', url: 'https://go1.kogirl.co/' },
+        { title: '19핫', url: 'https://02.19hot.net/' },
+        { title: '리얼티비', url: 'https://retv29.com/' },
+        { title: '딸즈니', url: 'https://kr1.ddalsney.com/' },
+        { title: '핫스팟', url: 'https://hotg33.com/' }
+      ],
+      '웹툰': [
+        { title: '레진코믹스', url: 'https://www.lezhin.com' },
+        { title: '투믹스', url: 'https://www.toomics.com' },
+        { title: '네이버 웹툰', url: 'https://comic.naver.com' },
+        { title: '카카오 웹툰', url: 'https://webtoon.kakao.com' },
+        { title: '탑툰', url: 'https://toptoon.com' },
+        { title: '봄툰', url: 'https://www.bomtoon.com' },
+        { title: '다음 웹툰', url: 'https://webtoon.daum.net' },
+        { title: '코미코', url: 'https://www.comico.kr' },
+        { title: '미스터블루', url: 'https://www.mrblue.com' },
+        { title: '북큐브', url: 'https://www.bookcube.com' }
+      ],
+      '성인웹툰': [
+        { title: '탑툰', url: 'https://toptoon.com' },
+        { title: '레진코믹스', url: 'https://www.lezhin.com' },
+        { title: '투믹스', url: 'https://www.toomics.com' },
+        { title: '미스터블루', url: 'https://m.mrblue.com' },
+        { title: '애니툰', url: 'https://www.anytoon.co.kr' },
+        { title: '블랙툰', url: 'https://www.blacktoon365.com' },
+        { title: '해피툰', url: 'https://happytoon01.com' },
+        { title: '뉴토끼', url: 'https://itrulli.com' },
+        { title: '늑대닷컴', url: 'https://xn--ph1bph0az41x.life/' },
+        { title: '펀비', url: 'https://xn--9w3b23dg1ivvl.com/' }
+      ],
+      '스포츠중계': [
+        { title: '블랙티비', url: 'https://blacktv99.com/' },
+        { title: '쿨티비', url: 'https://www.livecooltv.com/' },
+        { title: '마징가티비', url: 'https://mazgtv1.com/' },
+        { title: '콕티비', url: 'https://coktv1.com/' },
+        { title: '고트티비', url: 'https://xn--299av34a12ooga.com/' },
+        { title: '폭스티비', url: 'https://www.foxtv24.com/' },
+        { title: '초고속티비', url: 'https://superfast-tv.com/' },
+        { title: '빠른티비', url: 'https://quick-tv.com/' },
+        { title: '쪽티비', url: 'https://www.jjoktv.com/' },
+        { title: '오징어티비', url: 'https://ogtv1.com/' }
+      ],
+      'TV다시보기': [
+        { title: '넷플릭스', url: 'https://www.netflix.com' },
+        { title: '디즈니플러스', url: 'https://www.disneyplus.com' },
+        { title: '프라임비디오', url: 'https://www.amazon.com/Prime-Video' },
+        { title: '왓챠', url: 'https://watcha.com' },
+        { title: '웨이브', url: 'https://www.wavve.com' },
+        { title: '티비위키', url: 'https://www.nunutvs.net/' },
+        { title: '마루티비', url: 'https://marutva13.store/' },
+        { title: '티비착', url: 'https://tvchak.org/' },
+        { title: '티비판', url: 'https://tvpan5.com/' },
+        { title: '티비몬', url: 'https://tvmon16.org/' }
+      ],
+      '유흥': [
+        { title: '오피가이드', url: 'https://www.opga.online/' },
+        { title: '오피스타', url: 'https://www.opstarko.com/' },
+        { title: '인천달리기', url: 'https://www.indalkorea.com/' },
+        { title: '밤의민족', url: 'https://ssearchhelps.com/url/' },
+        { title: '오피뷰', url: 'https://opview76.com/' },
+        { title: '오피나라', url: 'https://www.opnaraop.com/' },
+        { title: '밤놀자', url: 'https://bamnolja.com/' },
+        { title: '하이오피', url: 'https://hiopjuso.com/' },
+
+        { title: '펀초', url: 'https://busanb61.net/' },
+        { title: '오팡', url: 'https://oppang12.com/' }
+      ],
+      '카지노': [
+        { title: '호우', url: 'https://www.xn--9g4bn0ioxmflc.com/' },
+        { title: '조인뱃', url: 'https://www.xn--tl3b69e9on3qo9adya766c.com/' },
+        { title: '메인뱃', url: 'https://mb-1144.com/' },
+        { title: '크루뱃', url: 'https://bspin999.com/' },
+        { title: '큐어뱃', url: 'https://www.xn--9l4b19e97cm8j.com/' },
+        { title: '네임드', url: 'https://muscleroast.com/' },
+        { title: '알파벳', url: 'https://www.zapb10.com/' },
+        { title: '토토핫', url: 'https://www.totohot.net/safety/121828' },
+        { title: '땅콩', url: 'https://xn--h11by6u74e3oi.com/' },
+        { title: '돛단배', url: 'https://xn--6j1b0r63r.com/' }
+      ],
+      '먹튀검증': [
+        { title: '토토군', url: 'https://totogun.com/' },
+        { title: '먹튀안내소', url: 'https://xn--220bn4p04fh5doxu.com/' },
+        { title: '토인국', url: 'https://toinkuk.com/' },
+        { title: '먹튀검증소', url: 'https://totosave.com/bbs/board.php?bo_table=GNB_13' },
+        { title: '토스타', url: 'https://xn--9t4b21xfta.com/' },
+        { title: '먹튀검증원', url: 'https://mtsaveone.com/' },
+        { title: '먹튀검문소', url: 'https://mt-gms11.com/' },
+        { title: '먹튀폴리스', url: 'https://www.mt-police04.com/' },
+        { title: '스코어맨', url: 'https://www.scoreman123.com/' },
+        { title: '다자바', url: 'https://www.dajaba.net/' }
+      ]
+    };
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    const grid = document.getElementById('cardGrid');
+    const tabs = document.querySelectorAll('.tab');
+
+    function loadCards(category) {
+      grid.innerHTML = '';
+      const sites = shuffle([...categories[category]]);
+      sites.forEach((site, idx) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<div class="thumb">${idx+1}</div><div class="meta"><h3>${site.title}</h3></div><button class="link-btn" onclick="window.open('${site.url}', '_blank')">바로가기</button>`;
+        grid.appendChild(card);
+      });
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelector('.tab.active').classList.remove('active');
+        tab.classList.add('active');
+        loadCards(tab.dataset.category);
+      });
+    });
+
+    loadCards('성인');
+  </script>
+</body>
+</html>
