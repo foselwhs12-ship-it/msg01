@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog | Life Balance Log</title>
+    <meta
+      name="description"
+      content="라이프 밸런스 로그의 최신 글을 모아 보는 블로그 페이지입니다."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">Life Balance Log</a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="blog.html" aria-current="page">Blog</a>
+          <a href="about.html">소개</a>
+          <a href="post.html">샘플 포스트</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h1>Blog</h1>
+          </div>
+          <button class="btn ghost" id="admin-login-btn">관리자 로그인</button>
+        </div>
+
+        <section class="admin-panel" id="admin-panel" aria-hidden="true">
+          <h2>관리자 전용</h2>
+          <form id="post-form" class="form">
+            <div class="form-row">
+              <label for="post-title">제목</label>
+              <input id="post-title" name="title" required placeholder="제목을 입력하세요" />
+            </div>
+            <div class="form-row">
+              <label for="post-summary">요약</label>
+              <input
+                id="post-summary"
+                name="summary"
+                required
+                placeholder="한 줄 요약을 입력하세요"
+              />
+            </div>
+            <div class="form-row">
+              <label for="post-content">내용</label>
+              <textarea
+                id="post-content"
+                name="content"
+                rows="6"
+                required
+                placeholder="본문을 입력하세요"
+              ></textarea>
+            </div>
+            <div class="form-row">
+              <label for="post-tags">태그 (쉼표로 구분)</label>
+              <input id="post-tags" name="tags" placeholder="휴식, 루틴, 컨디션" />
+            </div>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">포스트 등록</button>
+              <button class="btn subtle" type="button" id="admin-logout-btn">
+                로그아웃
+              </button>
+            </div>
+            <p class="helper">
+              ※ 실제 보안은 없고 데모용 관리자 권한입니다.
+            </p>
+          </form>
+        </section>
+
+        <section class="card-grid" id="blog-posts" aria-live="polite"></section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2024 Life Balance Log. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="blog.html">Blog</a>
+          <a href="about.html">소개</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
